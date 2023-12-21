@@ -1,0 +1,38 @@
+<!-- fichier index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Recorder in Javascript</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <video src="" id="gum" autoplay muted playsinline ></video>
+        <video src="" id="recorded" autoplay loop></video>
+        
+        <div>
+            <button id="start">Start Camera</button>
+            <button id="record" disabled>Record</button>
+            <button id="play" disabled>Play</button>
+            <button id="download" disabled>Download</button>
+        </div>
+
+        <div>
+            <h4>Media Stream Constraint Option</h4>
+            <p>
+                Echo cancellation: <input type="checkbox" id="echoCancellation" checked><br>
+            </p>
+        </div>
+        
+        <div>
+            <span id="errorMsg"></span>
+        </div>
+    </div>
+    <div>
+        <video src="./test.webm" autoplay></video>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
