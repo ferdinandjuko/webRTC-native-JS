@@ -60,8 +60,7 @@ function stopRecording() {
 function startRecording(){
     recordedBlobs = [];
     let options = {
-        mimeType: 'video/webm'
-        // mimeType: 'video/webm;codecs=vp9,opus'
+        mimeType: 'video/webm;codecs=vp9,opus'
     }
     try {
         mediaRecorder = new MediaRecorder(window.stream, options);
@@ -87,8 +86,8 @@ function startRecording(){
 }
 
 downloadButton.addEventListener('click', () => {
-    const blob = new Blob(recordedBlobs, {type: 'video/mp4'});
-    // const blob = new Blob(recordedBlobs, {type: 'video/webm;codecs=vp9,opus'});
+    // const blob = new Blob(recordedBlobs, {type: 'video/mp4'});
+    const blob = new Blob(recordedBlobs, {type: 'video/webm;codecs=vp9,opus'});
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.style.display = 'none';
